@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Searching — SN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/results.css">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <a class="brand" href="index.html">
+      <span class="mark">
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M3.5 7.5A1.5 1.5 0 0 1 5 6h14a1.5 1.5 0 0 1 1.5 1.5v9A1.5 1.5 0 0 1 19 18H5a1.5 1.5 0 0 1-1.5-1.5v-9z" stroke="currentColor" stroke-width="1.7"/>
+          <path d="M7.5 9.5h9M7.5 14.5h6.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <div><div>SN<small>Shopping Negotiator</small></div></div>
+    </a>
+    <nav>
+      <a href="index.html">New search</a>
+    </nav>
+  </header>
+
+  <!-- ================= NEGOTIATION CONSOLE / LOADING STATE ================= -->
+  <main class="view console-view" id="view-console">
+    <button class="cancel-link" id="cancel-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Cancel search</button>
+
+    <div class="stepper" id="stepper" role="list" aria-label="Search progress"></div>
+
+    <p class="stage-message" id="stage-message" role="status" aria-live="polite">Understanding your request…</p>
+    <p class="stage-sub" id="stage-sub">Parsing brand, model and specification</p>
+
+    <div id="identified-chip-slot"></div>
+    <div class="rows-panel" id="rows-panel"></div>
+  </main>
+
+  <!-- ================= ERROR / EMPTY STATE ================= -->
+  <main class="view error-view" id="view-error">
+    <div class="error-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg></div>
+    <h2 id="error-title">No confident match found</h2>
+    <p id="error-message">SN checked every connected platform but couldn't find a listing it's confident matches your request. Try adding a brand and model, or use a clearer photo.</p>
+    <div class="error-actions">
+      <button class="submit-btn" id="error-retry">Try again</button>
+      <button class="btn-secondary" id="error-home">Start a new search</button>
+    </div>
+  </main>
+
+  <!-- ================= RANKED RESULTS STATE ================= -->
+  <main class="view" id="view-results">
+    <section class="results-view">
+      <div class="results-topbar">
+        <button class="breadcrumb-btn" id="back-to-search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>Back</button>
+        <button class="new-search-btn" id="new-search-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg>New search</button>
+      </div>
+
+      <div class="identified-banner" id="identified-banner"></div>
+
+      <div class="results-heading">
+        <h3>Ranked results</h3>
+        <span id="results-count"></span>
+      </div>
+
+      <div id="results-list"></div>
+
+      <div class="results-footnote">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>
+        <span>Demo project — prices, ratings and delivery estimates shown are illustrative sample data, not live quotes.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 SN — Shopping Negotiator.</span>
+    <span>Find It. Compare It. Buy It.</span>
+  </footer>
+</div>
+
+<script src="js/results.js"></script>
+</body>
+</html>

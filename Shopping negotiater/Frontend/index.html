@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SN — Shopping Negotiator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=5">
+</head>
+<body>
+<div class="app">
+
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="SN home">
+      <span class="mark">
+        <svg class="sn-logo" viewBox="0 0 180 120" aria-hidden="true">
+          <text x="38" y="72">S</text>
+          <text x="75" y="72">N</text>
+          <path d="M18 82h126l-12 16H38" />
+          <circle cx="54" cy="108" r="6" />
+          <circle cx="119" cy="108" r="6" />
+        </svg>
+      </span>
+      <div class="brand-text">
+        <span class="brand-name">SN</span>
+        <small>Shopping Negotiator</small>
+      </div>
+    </a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#platforms">Platforms</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="platforms-panel" id="platforms" aria-labelledby="platforms-title">
+      <div class="panel-header">
+        <span id="platforms-title" class="section-kicker">PLATFORMS WE CHECK</span>
+        <span class="live-pill"><span class="live-dot"></span>7 Platforms Live</span>
+      </div>
+
+      <div class="platform-grid" aria-label="Shopping platforms we compare">
+        <article class="platform-card amazon">
+          <span class="platform-icon">a</span>
+          <span class="platform-name">Amazon</span>
+        </article>
+        <article class="platform-card flipkart">
+          <span class="platform-icon">f</span>
+          <span class="platform-name">Flipkart</span>
+        </article>
+        <article class="platform-card myntra">
+          <span class="platform-icon">M</span>
+          <span class="platform-name">Myntra</span>
+        </article>
+        <article class="platform-card croma">
+          <span class="platform-icon">C</span>
+          <span class="platform-name">Croma</span>
+        </article>
+        <article class="platform-card reliance">
+          <span class="platform-icon">R</span>
+          <span class="platform-name">Reliance Digital</span>
+        </article>
+        <article class="platform-card tatacliq">
+          <span class="platform-icon">Q</span>
+          <span class="platform-name">Tata CLiQ</span>
+        </article>
+        <article class="platform-card vijay">
+          <span class="platform-icon">VS</span>
+          <span class="platform-name">Vijay Sales</span>
+        </article>
+      </div>
+    </section>
+
+    <section class="brand-banner" aria-label="Shopping Negotiator brand banner">
+      <div class="brand-lockup">
+        <div class="sn-mark" aria-hidden="true">
+          <svg class="sn-logo" viewBox="0 0 180 120">
+            <text x="38" y="72">S</text>
+            <text x="75" y="72">N</text>
+            <path d="M18 82h126l-12 16H38" />
+            <circle cx="54" cy="108" r="6" />
+            <circle cx="119" cy="108" r="6" />
+          </svg>
+        </div>
+        <div class="brand-copy">
+          <h2>Shopping Negotiator</h2>
+          <p>Find It. Compare It. Buy It.</p>
+        </div>
+      </div>
+      <div class="tagline-panel">
+        <p id="tagline-text">Smart, quick, and easy.</p>
+      </div>
+    </section>
+
+    <section class="hero" aria-labelledby="search-heading">
+      <div class="section-heading">
+        <h1 id="search-heading">Find the right item.<br><span>We help you choose the best deal.</span></h1>
+      </div>
+
+      <div class="console-card">
+        <div class="tabbar" role="tablist" aria-label="Choose how to describe the product">
+          <button class="tab-btn" role="tab" id="tab-text" aria-selected="true" aria-controls="panel-text" data-tab="text">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h10M4 18h7"/></svg>
+            Describe it
+          </button>
+          <button class="tab-btn" role="tab" id="tab-link" aria-selected="false" aria-controls="panel-link" data-tab="link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"/><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07l1.36-1.36"/></svg>
+            Paste a link
+          </button>
+          <button class="tab-btn" role="tab" id="tab-image" aria-selected="false" aria-controls="panel-image" data-tab="image">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="9" cy="9" r="1.6"/><path d="M21 15l-5-5L5 21"/></svg>
+            Upload a photo
+          </button>
+        </div>
+
+        <div class="tab-panel active" id="panel-text" role="tabpanel" aria-labelledby="tab-text">
+          <div class="input-frame">
+            <span class="input-label">What are you looking for?</span>
+            <textarea id="text-input" placeholder="e.g. Samsung Galaxy S25 256GB in black" aria-label="Describe the product you want"></textarea>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-link" role="tabpanel" aria-labelledby="tab-link">
+          <div class="link-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.07 0l2.83-2.83a5 5 0 0 0-7.07-7.07L11.5 4.5"/><path d="M14 11a5 5 0 0 0-7.07 0L4.1 13.83a5 5 0 0 0 7.07 7.07l1.36-1.36"/></svg>
+            <input id="link-input" type="url" placeholder="Paste a product URL from any shopping site" aria-label="Product URL">
+          </div>
+        </div>
+
+        <div class="tab-panel" id="panel-image" role="tabpanel" aria-labelledby="tab-image">
+          <div class="dropzone" id="dropzone" tabindex="0" role="button" aria-label="Upload a product photo">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 16V4M12 4l-4 4M12 4l4 4"/><path d="M20 16.5v2A2.5 2.5 0 0 1 17.5 21h-11A2.5 2.5 0 0 1 4 18.5v-2"/></svg>
+            <p>Drop a product photo, or click to browse</p>
+            <span>JPG, PNG — screenshots work too</span>
+            <input type="file" id="file-input" accept="image/*">
+          </div>
+          <div class="upload-preview" id="upload-preview" style="display:none; margin-top:12px;">
+            <img id="preview-img" alt="">
+            <div class="meta"><p id="preview-name"></p><small id="preview-size"></small></div>
+            <button type="button" id="preview-remove" aria-label="Remove image"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+          </div>
+        </div>
+
+        <div class="console-footer">
+          <span class="field-hint" id="field-hint">Works best with brand, model and any key details.</span>
+          <button class="submit-btn" id="submit-btn">
+            Find the best price
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="chips-row">
+        <span class="chips-label">Try:</span>
+        <button class="chip" data-example="Samsung Galaxy S25 256GB Black">Samsung Galaxy S25</button>
+        <button class="chip" data-example="Apple iPhone 16 128GB Blue">iPhone 16</button>
+        <button class="chip" data-example="Sony WH-1000XM5 wireless headphones">Sony WH-1000XM5</button>
+        <button class="chip" data-example="Nike Air Zoom Pegasus 41 running shoes">Nike Pegasus 41</button>
+        <button class="chip" data-example="Apple MacBook Air M4 13 inch">MacBook Air M4</button>
+        <button class="chip ghost" id="demo-error-btn">Preview: no match found</button>
+      </div>
+
+      <div class="process-banner" id="how" aria-label="How Shopping Negotiator works">
+        <div class="process-intro">
+          <span class="process-kicker">HOW IT WORKS</span>
+          <h2>From your search to the best deal.</h2>
+          <p>We do the busy work in five simple steps.</p>
+        </div>
+        <div class="process-rail">
+          <span class="rail-step"><b>01</b><span>Understand<br>your request</span></span>
+          <span class="rail-step"><b>02</b><span>Identify<br>the product</span></span>
+          <span class="rail-step"><b>03</b><span>Match<br>listings</span></span>
+          <span class="rail-step"><b>04</b><span>Compare<br>prices</span></span>
+          <span class="rail-step"><b>05</b><span>Rank the<br>best deals</span></span>
+        </div>
+      </div>
+
+      <div class="trust-strip" id="platforms-checked">
+        <span class="label">Checked on every search —</span>
+        <div class="platform-badges" id="platform-badges"></div>
+      </div>
+
+      <div class="value-grid">
+        <div class="value-cell">
+          <div class="vnum">UNDERSTAND</div>
+          <h3>Describe it in your own words</h3>
+          <p>Type a product name, paste a link, or upload a photo. We match the same item before checking the price.</p>
+        </div>
+        <div class="value-cell">
+          <div class="vnum">MATCH</div>
+          <h3>Find the right product</h3>
+          <p>Stores often describe the same item differently. We compare only the listings that match your product.</p>
+        </div>
+        <div class="value-cell">
+          <div class="vnum">RANK</div>
+          <h3>Show the best value first</h3>
+          <p>We rank verified offers by price so you can see the best deal quickly and confidently.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-strip" aria-label="SN trust features">
+      <div class="feature-item"><span class="feature-icon">✓</span>Trusted &amp; Reliable</div>
+      <div class="feature-item"><span class="feature-icon">✦</span>Smart &amp; Simple</div>
+      <div class="feature-item"><span class="feature-icon">%</span>Best Deal Picks</div>
+      <div class="feature-item"><span class="feature-icon">=</span>Accurate Comparison</div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© 2026 SN — Shopping Negotiator.</span>
+    <span>Find It. Compare It. Buy It.</span>
+  </footer>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
